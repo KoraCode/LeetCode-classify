@@ -16,11 +16,12 @@ public:
 
             // 获得所有可行的右子树集合
             vector<TreeNode*> rightTrees = generateTrees(i + 1, end);
-
+       
+            //后序遍历
             // 从左子树集合中选出一棵左子树，从右子树集合中选出一棵右子树，拼接到根节点上
             for (auto& left : leftTrees) {                                                
                 for (auto& right : rightTrees) {
-                    TreeNode* currTree = new TreeNode(i);
+                    TreeNode* currTree = new TreeNode(i);       
                     currTree->left = left;
                     currTree->right = right;
                     allTrees.push_back(currTree);
