@@ -2,6 +2,19 @@
 
 解法：前序遍历 [ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ]   中序遍历 [ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ]
 
+前+后：
+后序遍历中，我们知道 左子树：[post_start,index], 右子树：[index+1, post_end-1]
+在前序遍历中，左子树起始位置为pre_start+1,左子树个数一共有(index - post_start)个，因此左子树：[pre_start+1, pre_start+1 + (index - post_start)]
+右子树起始位置为左子树终止位置+1，终止位置为pre_end，因此右子树：[ pre_start+1 + (index - post_start) + 1, pre_end]
+前+中：
+中序遍历中，我们知道 左子树：[inorder_start,index-1], 右子树：[index+1, inorder_end]
+在前序遍历中，左子树起始位置为pre_start+1,左子树一共有(index-1 - inorder_start)个，因此左子树：[pre_start+1, pre_start+1 + (index-1 - inorder_start)]
+右子树起始位置为左子树终止位置+1，终止位置为pre_end，因此右子树：[ pre_start+1 + (index-1 - inorder_start) + 1, pre_end]
+中+后：
+中序遍历中，我们知道 左子树：[inorder_start,index-1], 右子树：[index+1, inorder_end]
+在后序遍历中，左子树起始位置为post_start，左子树一共有(index-1 - inorder_start)个，因此左子树：[post_start, post_start + (index-1 - inorder_start)]
+右子树的终止位置为post_end - 1,右子树一共有(inorder_end - (index+1))个,因此右子树:[post_end - 1 - (inorder_end - (index+1)), post_end - 1]
+
 
 class Solution {
 public:
