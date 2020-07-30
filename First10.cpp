@@ -15,7 +15,40 @@
 在后序遍历中，左子树起始位置为post_start，左子树一共有(index-1 - inorder_start)个，因此左子树：[post_start, post_start + (index-1 - inorder_start)]
 右子树的终止位置为post_end - 1,右子树一共有(inorder_end - (index+1))个,因此右子树:[post_end - 1 - (inorder_end - (index+1)), post_end - 1]
 
+区分
+中、后：
+ TreeNode* root=new TreeNode(postorder[postorder_end]);
+ int index=inorder_start;
+ while(postorder[postorder_end] != inorder[index])
+ {
+        index++;
+ }      
+ root->left=dfs(inorder,postorder,inorder_start,index-1,postorder_start,postorder_start+(index-1-inorder_start));
+ root->right=dfs(inorder,postorder,index+1,inorder_end,postorder_end-1-(inorder_end-index-1),postorder_end-1);
 
+前、中：
+TreeNode* root=new TreeNode(pre[pre_start]);
+ int index=inorder_start;
+ while(pre[pre_start] != inorder[index])
+ {
+        index++;
+ }      
+ root->left=dfs(pre,inorder,pre_start+1,pre_start+1+(index-1-inorder_start),inorder_start,index-1);
+ root->right=dfs(pre,inorder,pre_start+1+(index-1-inorder_start)+1,pre_end,index+1,inorder_end);
+
+前、后：
+TreeNode* root=new TreeNode(pre[pre_start]);
+ int index=postorder_start;
+ while(pre[pre_start+1] != postorder[index])
+ {
+        index++;
+ }      
+ root->left=dfs(pre,postorder,pre_start+1,pre_start+1+(index-post_start),postorder_start,index);
+ root->right=dfs(pre,postorder,pre_start+1,pre_start+1+(index-post_start)+1,pre_end,index+1,post_end-1);
+
+
+
+//前、中
 class Solution {
 public:
     TreeNode* myBuildTree(const vector<int>& preorder, const vector<int>& inorder, int preorder_left, int preorder_right, int inorder_left, int inorder_right) {
@@ -50,5 +83,32 @@ public:
             index[inorder[i]] = i;
         }
         return myBuildTree(preorder, inorder, 0, n - 1, 0, n - 1);
+    }
+};
+
+
+//中、后
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        return dfs(inorder,postorder,0,inorder.size()-1,0,postorder.size()-1);
+    }
+
+    TreeNode* dfs(vector<int>& inorder, vector<int>& postorder,int inorder_start,int inorder_end,int postorder_start,int postorder_end)
+    {
+        if(inorder_start > inorder_end || postorder_start > postorder_end)  return NULL;
+        TreeNode* root=new TreeNode(postorder[postorder_end]);
+
+        if(postorder_start == postorder_end)    return root;
+
+        int index=inorder_start;
+        while(postorder[postorder_end] != inorder[index])
+        {
+            index++;
+        }
+        
+        root->left=dfs(inorder,postorder,inorder_start,index-1,postorder_start,postorder_start+(index-1-inorder_start));
+        root->right=dfs(inorder,postorder,index+1,inorder_end,postorder_end-1-(inorder_end-index-1),postorder_end-1);
+        return root;
     }
 };
