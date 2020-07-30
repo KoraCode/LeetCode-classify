@@ -20,4 +20,4 @@ void traverse(TreeNode* root) {
 7.  LeetCode 102 二叉树的层序遍历
 8.  LeetCode 103 二叉树的锯齿形层序遍历
 9.  LeetCode 104 二叉树的最大深度
-10. LeetCode 105 从前序与中序遍历序列构造二叉树
+10. LeetCode 105 从前序与中序遍历序列构造二叉树（前、后 和 中、后遍历）
