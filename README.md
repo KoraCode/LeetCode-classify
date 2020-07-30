@@ -22,3 +22,4 @@ void traverse(TreeNode* root) {
 9.  LeetCode 104 二叉树的最大深度
 10. LeetCode 105 从前序与中序遍历序列构造二叉树（前、后 和 中、后遍历）
 11. LeetCode 108 将有序数组转换为平衡二叉树
+12. LeetCode 110 判断是否为平衡二叉树
