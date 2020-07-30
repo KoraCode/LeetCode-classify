@@ -2,6 +2,7 @@
 
 解法：根据节点的左右子树的深度来判断
 
+//自上而下
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
@@ -19,4 +20,20 @@ public:
         return max( depth(node->left), depth(node->right) )+1;
     }
     
+};
+
+//自下而上
+class Solution {
+public:
+    bool isBalanced(TreeNode* root) {
+        return box(root) != -1;
+    }
+    int box(TreeNode* root){
+        if(!root)   return 0;
+        int l = box(root -> left);
+        if(l == - 1)    return -1;
+        int r = box(root -> right);
+        if(r == - 1)    return -1;
+        return abs(l - r) < 2 ? max(l, r) + 1 : - 1;
+    }
 };
