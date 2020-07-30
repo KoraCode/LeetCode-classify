@@ -11,13 +11,13 @@ void traverse(TreeNode* root) {
     // 后序遍历  
 }  
 
-1. LeetCode 94  二叉树的中序遍历
-2. LeetCode 95  不同的二叉搜索树 II
-3. LeetCode 98  验证二叉搜索树
-4. LeetCode 99  恢复二叉搜索树
-5. LeetCode 100 相同的树
-6. LeetCode 101 对称二叉树
-7. LeetCode 102 二叉树的层序遍历
-8. LeetCode 103 二叉树的锯齿形层序遍历
-9. LeetCode 104 二叉树的最大深度
-10.LeetCode 105 从前序与中序遍历序列构造二叉树
+1.  LeetCode 94  二叉树的中序遍历
+2.  LeetCode 95  不同的二叉搜索树 II
+3.  LeetCode 98  验证二叉搜索树
+4.  LeetCode 99  恢复二叉搜索树
+5.  LeetCode 100 相同的树
+6.  LeetCode 101 对称二叉树
+7.  LeetCode 102 二叉树的层序遍历
+8.  LeetCode 103 二叉树的锯齿形层序遍历
+9.  LeetCode 104 二叉树的最大深度
+10. LeetCode 105 从前序与中序遍历序列构造二叉树
