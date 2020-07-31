@@ -25,3 +25,5 @@ void traverse(TreeNode* root) {
 12. LeetCode 110 判断是否为平衡二叉树
 13. LeetCode 111 二叉树的最小深度
 14. LeetCode 112 路径总和
+15. LeetCode 113 路径总和II
+16. LeetCode 114 二叉树展开为链表
