@@ -34,3 +34,28 @@ public:
 	    return G[m - 1][n - 1];
     }   
 };
+
+题目：现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
+
+解法：多了一个判断是否有障碍物，如果有则G[0]=0；运用「滚动数组思想」把空间复杂度优化称 O(m)O(m)
+
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        if (obstacleGrid[0][0] == 1)
+            return false;
+        int m = obstacleGrid.size();
+        int n = obstacleGrid[0].size();
+        int table[101] = {0};
+        table[1] = 1;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (obstacleGrid[i-1][j-1] == 0) 
+                    table[j] += table[j-1];
+                else 
+                    table[j] = 0; 
+            }
+        }
+        return table[n];
+    }
+};
