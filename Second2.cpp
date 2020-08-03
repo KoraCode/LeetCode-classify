@@ -13,20 +13,20 @@ public:
             {
 		    for (int j = 0; j < n; j++)
 		    {
-			    if (!i && !j)
-			    {
-			    	G[i][j] = 1;
-			    	continue;
-		    	    }
+			if (!i && !j)
+			{
+			    G[i][j] = 1;
+			    continue;
+		    	}
 		    	if (i == 0)
-			    {
-			    	G[i][j] = G[i][j - 1];
-			    	continue;
-		    	    }
+			{
+			    G[i][j] = G[i][j - 1];
+			    continue;
+		    	}
 		    	if (j == 0)
 		    	{
-			    	G[i][j] = G[i - 1][j];
-			    	continue;
+			    G[i][j] = G[i - 1][j];
+			    continue;
 		        }
 		    	G[i][j] = G[i][j - 1] + G[i - 1][j];
 	    	    }
