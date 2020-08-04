@@ -42,3 +42,5 @@ void traverse(TreeNode* root) {
 1. LeetCode 53 最大子序和
 2. LeetCode 62、63 不同路径
 3. LeetCode 64 最小路径和
+4. LeetCode 70 爬楼梯
+5. LeetCode 91 解码方法
