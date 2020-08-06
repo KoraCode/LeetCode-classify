@@ -47,3 +47,4 @@ void traverse(TreeNode* root) {
 5. LeetCode 91 解码方法
 6. LeetCode 120 三角形最小路径和
 7. LeetCode 139 单词拆分
+8. LeetCode 152 乘积最大数组
