@@ -45,5 +45,5 @@ void traverse(TreeNode* root) {
 3. LeetCode 64 最小路径和
 4. LeetCode 70 爬楼梯
 5. LeetCode 91 解码方法
-6.
+6. LeetCode 120 三角形最小路径和
 7. LeetCode 139 单词拆分
