@@ -40,11 +40,13 @@ void traverse(TreeNode* root) {
 确定「状态」，也就是原问题和子问题中会变化的变量。  
 确定「选择」，也就是导致「状态」产生变化的行为。  
 
-1. LeetCode 53 最大子序和
-2. LeetCode 62、63 不同路径
-3. LeetCode 64 最小路径和
-4. LeetCode 70 爬楼梯
-5. LeetCode 91 解码方法
-6. LeetCode 120 三角形最小路径和
-7. LeetCode 139 单词拆分
-8. LeetCode 152 乘积最大数组
+1.  LeetCode 53 最大子序和
+2.  LeetCode 62、63 不同路径
+3.  LeetCode 64 最小路径和
+4.  LeetCode 70 爬楼梯
+5.  LeetCode 91 解码方法
+6.  LeetCode 120 三角形最小路径和
+7.  LeetCode 139 单词拆分
+8.  LeetCode 152 乘积最大数组
+9.  LeetCode 198 打家劫舍
+10. LeetCode 
