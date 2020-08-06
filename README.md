@@ -29,6 +29,7 @@ void traverse(TreeNode* root) {
 16. LeetCode 114 二叉树展开为链表
 17. LeetCode 116 填充每一个节点的下一个右侧节点指针
 18. LeetCode 129 求根到叶子节点数字之和
+19. LeetCode 199 二叉树的右视图
 
 
 第二大类--动态规划
