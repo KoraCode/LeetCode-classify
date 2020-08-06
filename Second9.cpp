@@ -22,3 +22,35 @@ public:
         return second;
     }
 };
+
+
+//房屋变成环形，分两种情况一种是偷第一间就不偷最后一间[0，i-1]，另外一种是偷最后一间就不偷第一间[1，i]；
+class Solution {
+public:
+    int rob(vector<int>& nums) 
+    {
+        int length=nums.size();
+        if(length==0) return 0;
+        if(length==1) return nums[0];
+
+        int first=nums[0];
+        int second=max(nums[0],nums[1]);
+        for(int i=2;i<length-1;i++)
+        {
+            int tmp=second;
+            second=max(first+nums[i],second);
+            first=tmp;
+        }
+        int result=second;
+        first=0;second=nums[1];
+        for(int i=2;i<length;i++)
+        {
+            int tmp=second;
+            second=max(first+nums[i],second);
+            first=tmp;
+        }
+        int ans=second;
+        result=max(result,ans);
+        return result;
+    }
+};
