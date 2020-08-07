@@ -1,6 +1,9 @@
 # LeetCode-classify
 用于归类总结其中的一类题型
 
+剑指Offer  
+3. 数组中重复的数字
+
 第一大类--二叉树  
 解题密码如下：  
 void traverse(TreeNode* root) {  
@@ -51,3 +54,5 @@ void traverse(TreeNode* root) {
 9.  LeetCode 198 打家劫舍
 10. LeetCode 264 丑数
 11. LeetCode 279 完全平方数
+12. LeetCode 300 最长上升子序列
+13. LeetCode
